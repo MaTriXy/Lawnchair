@@ -71,6 +71,10 @@
   *;
 }
 
+-keep,allowshrinking,allowoptimization class me.jfenn.attribouter.** {
+ *;
+}
+
 -dontwarn javax.**
 -dontwarn org.codehaus.mojo.animal_sniffer.**
 
@@ -85,5 +89,9 @@
 }
 
 -keep class ch.deletescape.lawnchair.preferences.HiddenAppsFragment {
+  *;
+}
+
+-keep class ch.deletescape.lawnchair.preferences.ShortcutBlacklistFragment {
   *;
 }

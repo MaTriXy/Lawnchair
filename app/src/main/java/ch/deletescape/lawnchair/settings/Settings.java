@@ -57,7 +57,6 @@ public class Settings implements SharedPreferences.OnSharedPreferenceChangeListe
                 case PreferenceFlags.KEY_PREF_ALL_APPS_OPACITY:
                     applyAllAppsOpacity(preferences);
                     break;
-                case PreferenceFlags.KEY_PREF_SHOW_HIDDEN_APPS:
                 case PreferenceFlags.KEY_PREF_HIDE_ALL_APPS_APP_LABELS:
                     las.reloadAllApps();
                     break;
@@ -106,6 +105,8 @@ public class Settings implements SharedPreferences.OnSharedPreferenceChangeListe
                 case PreferenceFlags.KEY_PREF_ICON_SCALE:
                 case PreferenceFlags.KEY_PREF_HOTSEAT_ICON_SCALE:
                 case PreferenceFlags.KEY_PREF_HOTSEAT_HEIGHT_SCALE:
+                case PreferenceFlags.KEY_PREF_HOTSEAT_CUSTOM_OPACITY:
+                case PreferenceFlags.KEY_HOTSEAT_SHOULD_USE_CUSTOM_OPACITY:
                 case PreferenceFlags.KEY_PREF_ALL_APPS_ICON_SCALE:
                 case PreferenceFlags.KEY_PREF_ALL_APPS_ICON_PADDING_SCALE:
                 case PreferenceFlags.KEY_PREF_ICON_TEXT_SCALE:
@@ -116,10 +117,8 @@ public class Settings implements SharedPreferences.OnSharedPreferenceChangeListe
                 case PreferenceFlags.KEY_PREF_NUM_ROWS_DRAWER:
                 case PreferenceFlags.KEY_PREF_HOTSEAT_SHOW_ARROW:
                 case PreferenceFlags.KEY_PREF_HOTSEAT_SHOW_PAGE_INDICATOR:
+                case PreferenceFlags.KEY_PREF_USE_SYSTEM_FONTS:
                 case PreferenceFlags.KEY_TWO_ROW_DOCK:
-                case PreferenceFlags.KEY_PREF_SNOWFALL:
-                case PreferenceFlags.KEY_PREF_SNOWFLAKE_SIZE_SCALE:
-                case PreferenceFlags.KEY_PREF_SNOWFLAKES_NUM:
                 case PreferenceFlags.KEY_AYY_MATEY:
                     mLauncher.scheduleKill();
                 case PreferenceFlags.KEY_BACKPORT_ADAPTIVE_ICONS:

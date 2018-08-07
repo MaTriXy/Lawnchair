@@ -11,6 +11,8 @@ interface IPreferenceProvider {
     // SORTED by Feature
     // -------------------
 
+    var restoreSuccess: Boolean
+
     // -------------------
     // 1) App Theme
     // -------------------
@@ -27,8 +29,6 @@ interface IPreferenceProvider {
     // -------------------
 
     val allAppsOpacity: Float
-    // defines if hidden apps should be shown in drawer for changing their hidden state
-    val showHidden: Boolean
     val allAppsIconScale: Float
     val allAppsIconTextScale: Float
     val allAppsIconPaddingScale: Float
@@ -73,8 +73,11 @@ interface IPreferenceProvider {
     val useFullWidthSearchBar: Boolean
     val showVoiceSearchButton: Boolean
     val showPixelBar: Boolean
+    val showSearchPill: Boolean
+    val showDateOrWeather: Boolean
     val homeOpensDrawer: Boolean
     val usePixelIcons: Boolean
+    val autoAddShortcuts: Boolean
     val enableScreenRotation: Boolean
     val hideAppLabels: Boolean
     val hideAllAppsAppLabels: Boolean
@@ -83,6 +86,7 @@ interface IPreferenceProvider {
     val transparentHotseat: Boolean
     val enableDynamicUi: Boolean
     val enableBlur: Boolean
+    fun enableBlur(enable: Boolean)
     val enableVibrancy: Boolean
     val useWhiteGoogleIcon: Boolean
     val useRoundSearchBar: Boolean
@@ -94,10 +98,11 @@ interface IPreferenceProvider {
     val lockDesktop: Boolean
     val animatedClockIcon: Boolean
     val animatedClockIconAlternativeClockApps: Boolean
+    val useSystemFonts: Boolean
     val iconLabelsInTwoLines: Boolean
     val twoRowDock: Boolean
     val pulldownAction: String
-    val enableSnowfall: Boolean
+    val dt2sHandler: String
 
     // -----------------
     // PREFERENCES
@@ -111,7 +116,9 @@ interface IPreferenceProvider {
     fun alternateIcon(key: String, alternateIcon: String, commit: Boolean = false)
     fun removeAlternateIcon(key: String)
     var hiddenAppsSet : Set<String>
+    var shortcutBlacklist: Set<String>
     var previousBuildNumber : Int
+    var disableLawnfeedPopup: Boolean
     var overrideIconShape: String
     val backportAdaptiveIcons: Boolean
     fun removeOverrideIconShape()
@@ -129,9 +136,9 @@ interface IPreferenceProvider {
     val iconPackPackage: String
     val hotseatIconScale: Float
     val hotseatHeightScale: Float
+    val hotseatShouldUseCustomOpacity: Boolean
+    val hotseatCustomOpacity: Float
     val enablePhysics: Boolean
-    val snowflakeSizeScale: Float
-    val snowflakesNum: String
     val ayyMatey: Boolean
 
     // -----------------

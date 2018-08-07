@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <ch.deletescape.lawnchair.preferences.GoogleNowPreference
+        android:key="pref_showGoogleNowTab"
+        android:persistent="true"
+        android:title="@string/show_google_now_tab_pref_title"
+        android:defaultValue="false" />
 
     <SwitchPreference
         android:key="pref_enableBackportShortcuts"
@@ -58,22 +64,14 @@
         android:persistent="true" />
 
     <SwitchPreference
-        android:key="pref_showHidden"
-        android:title="@string/show_hidden_pref_title"
-        android:summaryOn="@string/show_hidden_pref_on"
-        android:summaryOff="@string/show_hidden_pref_off"
-        android:defaultValue="false"
-        android:persistent="true" />
-
-    <SwitchPreference
         android:key="pref_lockDesktop"
         android:title="@string/lock_desktop"
         android:defaultValue="false"
         android:persistent="true" />
-    
-    <ch.deletescape.lawnchair.preferences.GoogleNowPreference
-        android:key="pref_showGoogleNowTab"
-        android:persistent="true"
-        android:title="@string/show_google_now_tab_pref_title"
-        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:key="pref_useSystemFonts"
+        android:title="@string/use_system_fonts_title"
+        android:defaultValue="false"
+        android:persistent="true" />
 </android.support.v7.preference.PreferenceScreen>
